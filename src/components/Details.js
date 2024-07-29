@@ -6,6 +6,7 @@ import db from "./firebase";
 const Details = () => {
   const { id } = useParams();
   const [detailData, setDetailData] = useState({});
+  const [isTrailerPlaying, setIsTrailerPlaying] = useState(false);
 
   useEffect(() => {
     db.collection("movies")
@@ -23,10 +24,20 @@ const Details = () => {
       });
   }, [id]);
 
+  const handleTrailerClick = () => {
+    setIsTrailerPlaying(!isTrailerPlaying);
+  };
+
   return (
     <Container>
       <Background>
-        <img alt={detailData.title} src={detailData.backgroundImg} />
+        {isTrailerPlaying ? (
+          <video autoPlay loop>
+            <source src={detailData.trailerUrl} type="video/mp4" />
+          </video>
+        ) : (
+          <img alt={detailData.title} src={detailData.backgroundImg} />
+        )}
       </Background>
 
       <ImageTitle>
@@ -38,7 +49,7 @@ const Details = () => {
             <img src="/images/play-icon-black.png" alt="" />
             <span>Play</span>
           </Player>
-          <Trailer>
+          <Trailer onClick={handleTrailerClick}>
             <img src="/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
           </Trailer>
@@ -76,7 +87,7 @@ const Background = styled.div`
   top: 0px;
   z-index: -1;
 
-  img {
+  video, img {
     width: 100vw;
     height: 100vh;
 
@@ -91,11 +102,11 @@ const ImageTitle = styled.div`
   display: flex;
   -webkit-box-pack: start;
   justify-content: flex-start;
-  margin: 0px auto;
-  height: 30vw;
+  margin: 0px 25px;
+  height: 27vw;
   min-height: 170px;
-  padding-bottom: 24px;
-  width: 100%;
+  padding-bottom: 14px;
+  width: 23%;
 
   img {
     max-width: 600px;
@@ -105,7 +116,8 @@ const ImageTitle = styled.div`
 `;
 
 const ContentMeta = styled.div`
-  max-width: 874px;
+  max-width: 474px;
+  margin: 0px 25px;
 `;
 
 const Controls = styled.div`
