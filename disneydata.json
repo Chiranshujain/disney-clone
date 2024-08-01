@@ -1,0 +1,24 @@
+{
+    "movies": {
+        "1" :{
+            "backgroundImg": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/8834/808834-i",
+            "cardImg": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/8834/808834-i",
+            "description": "Judy Hopps, the first rabbit to join the city police force, is determined to solve a dangerous case. Despite, everyone's lack of belief in her abilities.",
+            "subTitle": "2018 • 2h 14m • 4 Languages • U/A 13+ • Genre: Super-hero | Action | Dark-Humor | Technology.",
+            "title": "Zootopia",
+            "titleImg": "https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/1202/1371202-t-8b12119920aa",
+            "type": "disney",
+            "trailerUrl": "/trailers/zootopia.mp4"
+        },
+        "2" :{
+            "backgroundImg": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7776/1387776-i-4ee598473544",
+            "cardImg": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7776/1387776-i-4ee598473544",
+            "description": "When Mirabel, the only ordinary member of the Madrigal family, discovers the magic surrounding their home is in danger, she may be her family’s last hope.",
+            "subTitle": "2021 • 1h 42m • 4 Languages • U/A 7+ • Genre: Animation, Musical, Fantasy, Adventure.",
+            "title": "Encanto",
+            "titleImg": "https://img10.hotstar.com/image/upload/f_auto,h_156/sources/r1/cms/prod/7778/1387778-t-cc992c4fc3f1",
+            "type": "disney"
+        }
+        
+    }
+}
